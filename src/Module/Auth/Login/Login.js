@@ -18,8 +18,8 @@ export const Login = (props) => {
             if (email === "Demo@gmail.com" && password === "demo123") {
                 let token = "dummyToken"
                 localStorage.setItem("tokendummy", JSON.stringify(token))
-                // navigate("/Home")
-                window.location.href = "/Home"
+                navigate("/Home")
+                // window.location.href = "/Home"
             }
             else {
                 alert("error")

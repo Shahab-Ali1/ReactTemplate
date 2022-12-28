@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import {
-    BrowserRouter as Router,
-} from 'react-router-dom';
 import BasePage from '../../BasePage/BasePage';
 import { Layout } from '../../GeneralComponent/Layout/Layout';
 import { getToken } from '../../Utility/GenericMethods/GenericMethods';
@@ -23,7 +20,6 @@ export const Authentication = (props) => {
     debugger;
     return (
         <React.Fragment>
-            {/* <Router> */}
                 {
                     // isAuthenticate ? (
                         token !== "" ? (
@@ -33,7 +29,6 @@ export const Authentication = (props) => {
                         <AuthRoutes />
                     )
                 }
-            {/* </Router> */}
         </React.Fragment>
     )
 }

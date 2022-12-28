@@ -16,7 +16,7 @@ export const Navbar = (props) => {
             if(token !== "") {
                 localStorage.removeItem("tokendummy")
                 // window.location.href = "/Login"
-                navigate("/Login", { replace: true })
+                navigate("/Login")
                 // navigate({to: '/Login'})
             }
         } catch (error) {
