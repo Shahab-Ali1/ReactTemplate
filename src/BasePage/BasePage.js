@@ -12,7 +12,7 @@ export default function BasePage() {
         <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/About" element={<About />} />
         </Routes>
     )
 }

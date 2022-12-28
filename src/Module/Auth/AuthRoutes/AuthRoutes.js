@@ -11,7 +11,8 @@ export default function AuthRoutes() {
     return (
         <Routes>
             <Route exact path="/" element={<Login />} />
-            <Route exact path="/signup" element={<SignUp />} />  {/* Fresh Branch */}
+            <Route exact path="/Login" element={<Login />} />
+            <Route path="/Signup" element={<SignUp />} />  {/* Fresh Branch */}
         </Routes>
     )
 }

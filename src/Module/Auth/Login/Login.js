@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate, Redirect } from 'react-router-dom';
-import { Authentication } from '../../Authentication/Authentication';
+import { useNavigate } from 'react-router-dom';
 
 export const Login = (props) => {
     //#region objects
@@ -12,22 +11,15 @@ export const Login = (props) => {
     const [password, setpassword] = useState("")
     //#endregion
 
+    //#region functions
     /* login functionalty */
     const clickLogin = () => {
         try {
-            debugger;
             if (email === "Demo@gmail.com" && password === "demo123") {
                 let token = "dummyToken"
                 localStorage.setItem("tokendummy", JSON.stringify(token))
-                navigate("/Home")
-                // navigate("/signup")
-                // return(
-                //     <>
-                //     <Authentication
-                //     auth={true}
-                //     />
-                //     </>
-                // )
+                // navigate("/Home")
+                window.location.href = "/Home"
             }
             else {
                 alert("error")
@@ -36,6 +28,7 @@ export const Login = (props) => {
             console.log(error)
         }
     }
+    //#endregion functions
 
 
     return (
