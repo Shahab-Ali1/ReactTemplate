@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Speed Rush';
+    src: url('SpeedRush-Regular.eot');
+    src: url('SpeedRush-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SpeedRush-Regular.woff2') format('woff2'),
+        url('SpeedRush-Regular.woff') format('woff'),
+        url('SpeedRush-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
