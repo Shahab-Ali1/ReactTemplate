@@ -1,0 +1,21 @@
+.MuiOutlinedInput-input{
+    font: inherit !important;
+    letter-spacing: inherit !important;
+    color: currentColor !important;
+    padding: 4px 0 5px !important;
+    border: 0 !important;
+    box-sizing: content-box !important;
+    background: none !important;
+    /* height: 0.4375em !important; */
+    height: 13px !important;
+    margin: 0 !important;
+    -webkit-tap-highlight-color: transparent !important;
+    display: block !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    -webkit-animation-name: mui-auto-fill-cancel !important;
+    animation-name: mui-auto-fill-cancel !important;
+    -webkit-animation-duration: 10ms !important;
+    animation-duration: 10ms !important;
+    padding: 16.5px 14px !important;
+}
