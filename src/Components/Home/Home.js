@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react'
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+// import Box from '@mui/material/Box';
+// import TextField from '@mui/material/TextField';
 import { useSelector, useDispatch } from 'react-redux'
 import { addDataRedux } from '../../Redux/Reducer/Example/Example';
 import { TextFieldComponent } from '../../Utility/UI/Textfield/TextField';
+import { GetService, getService } from '../../Utility/GenericMethods/GenericMethods';
+import { toastError, toastSuccess } from '../../Utility/Toast/Toast';
 
 export const Home = (props) => {
     //#region objects
@@ -20,6 +22,25 @@ export const Home = (props) => {
     console.log("store", INIT_ARRAY)
     //#endregion states 
 
+    //#region functions
+    const callingGetApi = (params) => {
+        try {
+            const baseURL = "https://jsonplaceholder.typicode.com/posts";
+            GetService(`${baseURL}/1`)
+                .then((response) => {
+                    console.log(response.data);
+                    toastSuccess("Success")
+                })
+                .catch((error) => {
+                    toastError(error.message)
+                })
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    //#endregion functions
+
 
     return (
         <React.Fragment>
@@ -31,8 +52,9 @@ export const Home = (props) => {
                 inputProps={{ maxLength: 12 }}
                 disabled={false}
                 onBlur={(e) => { alert(e.target.value) }}
-                // value=""
-                // onChange={(e) => {alert(e.target.value)}}
+                // onBlur={callingGetApi}
+            // value=""
+            // onChange={(e) => {alert(e.target.value)}}
             />
             <br></br>
             <br></br>
@@ -44,7 +66,7 @@ export const Home = (props) => {
                 disabled={false}
                 // onBlur={(e) => { alert(e.target.value) }}
                 // value=""
-                onChange={(e) => {alert(e.target.value)}}
+                onChange={(e) => { alert(e.target.value) }}
             />
         </React.Fragment>
     )
