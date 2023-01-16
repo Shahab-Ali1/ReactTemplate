@@ -1,10 +1,13 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { authToken } from '../../../Redux/Reducer/Auth/Auth';
 import { toastError, toastSuccess } from '../../../Utility/Toast/Toast';
 
 export const Login = (props) => {
     //#region objects
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     //#endregion
 
     //#region states
@@ -19,8 +22,8 @@ export const Login = (props) => {
             if (email === "Demo@gmail.com" && password === "demo123") {
                 let token = "dummyToken"
                 localStorage.setItem("tokendummy", JSON.stringify(token))
+                dispatch(authToken(token))
                 navigate("/Home")
-                // window.location.href = "/Home"
                 toastSuccess("Login Successfully")
             }
             else {

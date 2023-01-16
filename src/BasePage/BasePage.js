@@ -4,6 +4,7 @@ import {
     Route,
 } from 'react-router-dom';
 import { About } from '../Components/About/About';
+import { FormTemplate } from '../Components/FormTemplate/FormTemplate';
 import { Home } from '../Components/Home/Home';
 
 export default function BasePage() {
@@ -13,6 +14,7 @@ export default function BasePage() {
             <Route exact path="/" element={<Home />} />
             <Route path="/Home" element={<Home />} />
             <Route path="/About" element={<About />} />
+            <Route path="/demo" element={<FormTemplate />} />
         </Routes>
     )
 }
