@@ -1,9 +1,16 @@
 import React from 'react'
 import { CheckBoxComponent } from '../../Utility/UI/CheckBox/CheckBox'
 import { TextFieldComponent } from '../../Utility/UI/Textfield/TextField'
+import GridDemo from '../Grids/GridDemo/GridDemo'
 export const FormTemplate = (props) => {
     return (
         <React.Fragment>
+            <div className='row'>
+                <div className='col-lg-12'>
+                    <GridDemo/>
+                </div>
+            </div>
+
             <div>
                 <div className='row'>
                     <div className='col-lg-4'>
@@ -63,8 +70,8 @@ export const FormTemplate = (props) => {
                     />
                 </div>
             </div>
-            
-            
+
+
         </React.Fragment>
     )
 }

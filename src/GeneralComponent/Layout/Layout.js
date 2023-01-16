@@ -15,8 +15,7 @@ export function Layout({ children }) {
                 </div>
                 <div className="row m-0 p-0">
                     <div className="col-lg-2 m-0 p-0"><Sidebar /></div>
-                    {/* <div className="col-lg-10 m-0 p-0">{children}</div> */}
-                    <div className="col-lg-10 mt-4">{children}</div>
+                    <div className="col-lg-10 m-0 p-0 mt-3">{children}</div>
                 </div>
             </div>
             {/* <div style={{ position: "fixed", top: "0px", left: "0px" }} className="w-100">
